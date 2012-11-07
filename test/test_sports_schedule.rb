@@ -12,7 +12,7 @@ class TestSportsSchedule < Minitest::Unit::TestCase
     @r = Class.new{ include SportsSchedule::Rugby }.new
   end
 
-  def test_parse
-    assert_equal(true, @r.parse(2012, 11))
+  def test_parse_returns_Array
+    assert_instance_of(Array, @r.parse(2012, 11))
   end
 end
